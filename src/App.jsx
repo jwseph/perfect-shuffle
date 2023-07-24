@@ -93,7 +93,7 @@ function App() {
             </a>
           </div>
           <p>
-            Ever wondered what method of shuffling a deck guarantees the most randomness?
+            Ever wondered what method of shuffling a deck of cards guarantees the most randomness?
             According to <A href='https://youtu.be/AxJubaijQbI' external>a Numberphile video</A>, you should riffle shuffle seven times to make a deck almost completely random. But this doesn't achieve perfect randomness.
           </p>
           <p>
