@@ -181,12 +181,12 @@ function App() {
             At this point, the pile each card is in is random, but the order of the 13 cards of each pile is not.
           </p>
           <p>
-            The third step randomizes the order of the 13 cards of each pile.
+            The third step randomizes the order of the 13 cards of each pile (split the instructions into groups of 13 to see).
           </p>
           <p>
             To stack the 4 shuffled piles together into one shuffled deck, you'd have to recreate the piles by taking the cards layer by layer.
-            However, the fourth step skips this by taking 4 cards at a time, which is the same as interweaving the 4 piles together.
-            Since the piles are uniformly interweaved, the action acts as a transposition, and the deck is shuffled. □
+            However, the fourth step skips this by taking 4 cards at a time, which is the same as interweaving the 4 shuffled piles together.
+            Since the piles are interweaved uniformly, this interweaving action is a bijection, and because a stack of the 4 shuffled piles would produce a shuffled deck, the interweaved deck must also be shuffled. □
           </p>
         </div>
       </div>
