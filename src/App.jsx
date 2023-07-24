@@ -80,7 +80,7 @@ function App() {
   }, [])
 
   return (
-    <div className='w-full min-h-full px-0 sm:px-8 py-1 sm:py-8 flex flex-col justify-center items-center bg-gradient-to-br from-fuchsia-500 via-violet-400 to-blue-400 selection:bg-violet-300/25 selection:text-zinc-50'>
+    <div className='w-full min-h-full px-0 sm:px-8 py-1 sm:py-8 flex flex-col justify-center items-center bg-gradient-to-br from-fuchsia-500 via-violet-400 to-blue-400 selection:bg-violet-300/25 selection:text-zinc-50 select-none'>
       <div className='bg-zinc-950/60 text-zinc-200 w-full px-8 py-12 max-w-2xl sm:rounded-xl space-y-12'>
         <div className='space-y-6'>
           <div className='w-full flex justify-between items-center'>
@@ -104,7 +104,7 @@ function App() {
           <li className='space-y-4'>
             <span>Deal a 52-card deck into four piles using these instructions:</span>
             <div className='space-y-4'>
-              <div className='font-mono select-none hover:text-zinc-50/25'>
+              <div className='font-mono hover:text-zinc-50/25'>
                 {deal4.map((num, i) => (
                   <>
                     {i%6 == 0 && <> </>}
@@ -114,7 +114,7 @@ function App() {
                   </>
                 ))}
               </div>
-              <div className='flex flex-wrap gap-2 select-none justify-center'>
+              <div className='flex flex-wrap gap-2 justify-center'>
                 {[1, 2, 3, 4].map((deck) => (
                   <div className={classNames(
                     'w-16 aspect-[5/7] border-2 flex justify-center items-center rounded-md font-mono text-xl',
@@ -134,7 +134,7 @@ function App() {
           <li className='space-y-4'>
             <span>Deal the deck into 13 piles using these instructions:</span>
             <div className='space-y-4'>
-              <div className='font-mono select-none hover:text-zinc-50/25'>
+              <div className='font-mono hover:text-zinc-50/25'>
                 {deal13.map((num, i) => (
                   <>
                     {i%4 == 0 && <> </>}
@@ -147,7 +147,7 @@ function App() {
               <div className='flex justify-center'>
                 <div className='space-y-4'>
                   {[0, 4, 8, 12].map(startingDeck => (
-                    <div className='flex flex-wrap gap-2 select-none'>
+                    <div className='flex flex-wrap gap-2'>
                       {[startingDeck, startingDeck+1, startingDeck+2, startingDeck+3].map((deck) => {
                         if (deck >= 13) return;
                         return <div className={classNames(
