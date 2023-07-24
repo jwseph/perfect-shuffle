@@ -189,6 +189,19 @@ function App() {
             Since the piles are interweaved uniformly, this interweaving action is a bijection, and because a stack of the 4 shuffled piles would produce a shuffled deck, the interweaved deck must also be shuffled. □
           </p>
         </div>
+        <div className='space-y-6'>
+          <h2 className='text-lg font-medium tracking-tight'>Alternative proof</h2>
+          <p>
+            The first step has 52!/(13!)<sup>4</sup> possibilities, each with an equal weight. The second step has (13!)<sup>4</sup> possibilities, each with an equal weight. Taking the product, there are 52! pairs of one possibility from the first step and one from the second step.
+            Assuming each of these pairs creates a distinct deck, this shuffling method has 52! possible decks, each with an equal weight.
+          </p>
+          <p>
+            To show that each of these pairs will create a distinct deck, after the first step, these piles never (nonuniformly) overlap with each other, so none of the third step's permutations could undo the first step's results.
+          </p>
+          <p>
+            Since this shuffling method has exactly 52! possible decks, each with an equal weight, it is perfectly shuffled. □
+          </p>
+        </div>
       </div>
     </div>
   )
