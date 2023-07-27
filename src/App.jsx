@@ -173,7 +173,7 @@ function App() {
             {' '}<Label13 num={11}/> onto <Label13 num={12}/>.
           </li>
         </ol>
-        <div>Now your deck is fully shuffled!</div>
+        <div>There you have it, a perfectly shuffled deck of cards!</div>
         <div className='space-y-6'>
           <h2 className='text-lg font-medium tracking-tight'>Proof</h2>
           <p>
@@ -193,13 +193,13 @@ function App() {
           <h2 className='text-lg font-medium tracking-tight'>Alternative proof</h2>
           <p>
             The first step has 52!/(13!)<sup>4</sup> possibilities, each with an equal weight. The second step has (13!)<sup>4</sup> possibilities, each with an equal weight. Taking the product, there are 52! pairs of one possibility from the first step and one from the second step.
-            Assuming each of these pairs creates a distinct deck, this shuffling method has 52! possible decks, each with an equal weight.
+            If each of these pairs creates a distinct deck, this shuffling method has 52! possible decks, each with an equal weight.
           </p>
           <p>
-            To show that each of these pairs will create a distinct deck, after the first step, these piles never (nonuniformly) overlap with each other, so none of the third step's permutations could undo the first step's results.
+            To show that each of these pairs creates a distinct deck, after the first step, these piles never (nonuniformly) overlap with each other, so none of the third step's permutations can undo the first step's results.
           </p>
           <p>
-            Since this shuffling method has exactly 52! possible decks, each with an equal weight, it is perfectly shuffled. □
+            Since this shuffling method can generate exactly 52! decks, each with an equal weight, the decks it generates are perfectly shuffled. □
           </p>
         </div>
       </div>
