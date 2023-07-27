@@ -27,24 +27,28 @@ const SYMBOLS = [
   'd1',
 ]
 
-function Label4({num}) {
+function Label4({num, className}) {
   return (
-    <span className='font-mono'
+    <span className={className}
       onMouseEnter={() => setSelectedDeck4(num)}
       onMouseLeave={() => setSelectedDeck4(-1)}
     >
-      {num}
+      <span className='font-mono'>
+        {num}
+      </span>
     </span>
   )
 }
 
-function Label13({num}) {
+function Label13({num, className}) {
   return (
-    <span className='font-mono tracking-tight'
+    <span className={className}
       onMouseEnter={() => setSelectedDeck13(num)}
       onMouseLeave={() => setSelectedDeck13(-1)}
     >
-      {SYMBOLS[num]}
+      <span className='font-mono tracking-tight'>
+        {SYMBOLS[num]}
+      </span>
     </span>
   )
 }
@@ -108,9 +112,7 @@ function App() {
                 {deal4.map((num, i) => (
                   <>
                     {i%6 == 0 && <> </>}
-                    <span className='hover:text-zinc-50 px-px'>
-                      <Label4 num={num}/>
-                    </span>
+                    <Label4 num={num} className='hover:text-zinc-50 px-px'/>
                   </>
                 ))}
               </div>
@@ -138,9 +140,7 @@ function App() {
                 {deal13.map((num, i) => (
                   <>
                     {i%4 == 0 && <> </>}
-                    <span className='hover:text-zinc-50 px-0.5'>
-                      <Label13 num={num}/>
-                    </span>
+                    <Label13 num={num} className='hover:text-zinc-50 px-0.5'/>
                   </>
                 ))}
               </div>
